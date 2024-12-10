@@ -1,21 +1,9 @@
-alert("Hi Zohaib");
-
-alert
-//Data Type
-//" " string 
-// number int 333 -333456
-
-stdobtMarks =  prompt("Obtained MaRKS")
-stdtmMarks = prompt(" Total Marks")
-res = stdobtMarks / stdtmMarks*100
-
-alert(res)
-
-document.write(res)
-
-
-
-
-
-// uint 34567897689.57689
-// bool true false 
+function calculateZakat() {
+    const wealth = parseFloat(document.getElementById('wealth').value);
+    if (isNaN(wealth) || wealth < 0) {
+        document.getElementById('result').innerText = "Please enter a valid amount.";
+        return;
+    }
+    const zakat = wealth * 0.025;
+    document.getElementById('result').innerText = "Your Zakat is: " + zakat.toFixed(2);
+}
